@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --color-grey-main: #333333;
+  --color-grey-secondary: #4f4f4f;
+  --color-grey-footer: #bdbdbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header,
+main {
+  padding: 4rem 0 0 7.7rem;
+}
+
+@media screen and (max-width: 1000px) {
+  header,
+  main {
+    padding: 2.4rem 0 0 2rem;
+  }
+}
+
+header {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 700;
+  font-size: 2.4rem;
+  grid-column: 1 / -1;
+}
+
+main {
+  font-family: 'Space Mono', monospace;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.hero-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 80%;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-img {
+    width: 29rem;
+    height: 24rem;
+  }
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-cta > h2 {
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 9.5rem;
+  color: var(--color-grey-main);
+}
+
+.hero-cta > p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  color: var(--color-grey-secondary);
+  margin: 3rem 0 6rem 0;
+}
+
+.hero-cta > button {
+  width: 21.6rem;
+  height: 6.8rem;
+  background-color: var(--color-grey-main);
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-cta > h2 {
+    font-size: 4.8rem;
+    line-height: 7.1rem;
+  }
+
+  .hero-cta > p {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin: 1.5rem 0 3rem 0;
+  }
+}
+
+footer {
+  padding: 2.4rem 0;
+  font-family: 'Montserrat', monospace;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--color-grey-footer);
+  text-align: center;
+}
+
+.username {
+  font-weight: 700;
+}
